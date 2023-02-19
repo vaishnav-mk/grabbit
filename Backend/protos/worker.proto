@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package servicePackage;
+
+service WorkerService {
+  rpc SendRequest (Request) returns (Response) {}
+}
+
+message Request {
+  string data = 1;
+}
+
+message Response {
+  bool success = 1;
+}
